@@ -14,14 +14,14 @@ export default function Blog({ posts }) {
 export async function getStaticProps() {
   // Call an external API endpoint to get posts
   // const res = await fetch('https://www.mocky.io/v3/a62fa770-9bff-4839-be5c-a203317898e0')
-  // const posts = await loadPosts();
+  const posts = await loadPosts();
   
-  const res = await fetch('https://jsonplaceholder.typicode.com/users')
-  const posts = await res.json();
+  // const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  // const posts = await res.json();
 
-  if(!res.ok){
-    throw new Error(`Failed to fetch posts, received statis ${res.status}`)
-  }
+  // if(!res.ok){
+  //   throw new Error(`Failed to fetch posts, received statis ${res.status}`)
+  // }
 
   // By returning { props: { posts } }, the Blog component
   // will receive `posts` as a prop at build time
