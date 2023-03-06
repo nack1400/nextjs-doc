@@ -7,15 +7,21 @@ import {
   Typography,
   Tooltip,
 } from "@material-tailwind/react";
-import Image from 'next/image';
+import Image from "next/image";
+import Layout from "@/components/layout";
 
 export default function Home() {
   return (
-    <div className='flex p-10'>
-      <div className="flex-1 m-5">
+    <div className="flex">
+      <div className="flex-1 my-6">
         <Card className="w-96">
           <CardHeader floated={false} className="h-80">
-            <Image src="/img/img1.jpg" alt="profile-picture" width={400} height={400} />
+            <Image
+              src="/img/img1.jpg"
+              alt="profile-picture"
+              width={400}
+              height={400}
+            />
           </CardHeader>
           <CardBody className="text-center">
             <Typography variant="h4" color="blue-gray" className="mb-2">
@@ -70,3 +76,7 @@ export default function Home() {
     </div>
   );
 }
+
+Home.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};

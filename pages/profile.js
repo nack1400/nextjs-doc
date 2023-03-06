@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react'
 import useSWR from 'swr';
+import axios from 'axios';
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
+const fetcher = async (url) => {
+  const response = await axios.get(url);
+  return response.data;
+};
 
 export default function Profile() {
   // const [datas, setDatas] = useState(null)
