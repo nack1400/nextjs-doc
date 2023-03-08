@@ -1,12 +1,12 @@
 import { Progress } from "@material-tailwind/react";
-import variables from '../styles/variables.module.scss'
+// import variables from '../styles/variables.module.scss'
 
 export default function Footer() {
   return (
     <>
       <hr />
       <hr />
-      <h1 style={{color : variables.primaryColor}}>FOOTER</h1>
+      {/* <h1 style={{color : variables.primaryColor}}>FOOTER</h1> */}
       <div className="flex w-full flex-col gap-4">
         <Progress value={50} color="blue" />
         <Progress value={60} color="red" />
